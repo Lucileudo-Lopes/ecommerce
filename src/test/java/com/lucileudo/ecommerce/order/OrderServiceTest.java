@@ -26,7 +26,7 @@ import com.lucileudo.ecommerce.user.User;
 import com.lucileudo.ecommerce.user.UserRepository;
 
 @ExtendWith(MockitoExtension.class)
-public class OrderServiceTeste {
+public class OrderServiceTest {
 
 	@Mock
 	private OrderRepository orderRepository;
