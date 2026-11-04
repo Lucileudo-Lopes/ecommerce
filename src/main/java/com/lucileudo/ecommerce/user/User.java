@@ -2,6 +2,8 @@ package com.lucileudo.ecommerce.user;
 
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -26,6 +28,7 @@ public class User {
 	@Column(unique = true)
 	private String userName;
 
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private String password;
 
 	@Enumerated(EnumType.STRING)

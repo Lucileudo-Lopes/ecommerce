@@ -3,6 +3,7 @@ package com.lucileudo.ecommerce.order;
 import java.math.BigDecimal;
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.lucileudo.ecommerce.product.Product;
 
 import jakarta.persistence.Entity;
@@ -25,6 +26,7 @@ public class OrderItem {
 
 	@ManyToOne
 	@JoinColumn(name = "order_id")
+	@JsonIgnore
 	private Order order;
 
 	@ManyToOne

@@ -2,6 +2,7 @@ package com.lucileudo.ecommerce.order;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -44,6 +45,6 @@ public class Order {
 	private BigDecimal total;
 
 	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-	private List<OrderItem> items;
+	private List<OrderItem> items = new ArrayList<>();
 
 }
